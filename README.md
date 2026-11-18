@@ -1,6 +1,6 @@
-﻿# kMacPaint (Windows 11 mspaint Edition for macOS)
+﻿# kMacPaint (macOS Native Canvas & Pixel Art Paint)
 
-Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역공학(REA)하여, **macOS 네이티브(Swift / AppKit / CoreGraphics)** 환경에 100% 동일한 사용감으로 재구현한 맥용 그림판입니다.
+직관적인 툴바와 풍부한 캔버스 조작성을 갖춘 **macOS 네이티브(Swift / AppKit / CoreGraphics)** 초경량 고성능 그래픽 도구입니다.
 
 [![Release](https://img.shields.io/github/v/release/kiktmog-cloud/kMacPaint?color=0078D4&label=kMacPaint%20Release)](https://github.com/kiktmog-cloud/kMacPaint/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-macOS%2012.0+-lightgrey)](https://github.com/kiktmog-cloud/kMacPaint)
@@ -13,7 +13,7 @@ Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역�
 ## 🎨 핵심 구현 기능
 
 ### 1. 8방향 전방위 캔버스 리사이즈 핸들 & 실시간 확장 가이드 (좌측/상단 확장 완벽 지원)
-* **전방위 8방향 핸들 탑재:** 기존 윈도우 그림판의 우측/하단 한계를 넘어 **좌측(Left), 상단(Top), 우측(Right), 하단(Bottom)** 및 **4개 모서리(좌상, 우상, 좌하, 우하)**까지 총 8개의 8x8px 흰색 핸들이 배치되어 있습니다.
+* **전방위 8방향 핸들 탑재:** 일반적인 캔버스 에디터의 우측/하단 한계를 넘어 **좌측(Left), 상단(Top), 우측(Right), 하단(Bottom)** 및 **4개 모서리(좌상, 우상, 좌하, 우하)**까지 총 8개의 8x8px 흰색 핸들이 배치되어 있습니다.
 * **좌측 및 상단 캔버스 확장:** 좌측 핸들을 왼쪽으로 당기거나 상단 핸들을 위로 당기면, 기존 그림을 원하는 위치에 안전하게 보존한 채 좌측/상단 방향으로 도화지가 실시간으로 시원하게 늘어납니다.
 * **실시간 확장 가이드:** 마우스로 핸들을 잡고 드래그하면 어디까지 확장되는지 선명한 파란색/흰색 이중 점선 가이드(2.5px)와 옅은 반투명 영역이 실시간으로 표시됩니다.
 * 새로 늘어난 영역은 2번 배경색(Color 2)으로 자동 확장되며, **실행 취소(`⌘Z`)**를 완벽 지원합니다.
@@ -38,7 +38,7 @@ Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역�
 
 ### 3. 캔버스 확대/축소 (Zoom) & 제스처 지원
 * **하단 상태표시줄 줌 컨트롤러:**
-  * 윈도우 그림판 스타일의 `[-]` 버튼, 줌 슬라이더 (25% ~ 800%), `[+]` 버튼, 현재 배율 퍼센트 라벨(예: `100%`) 탑재
+  * 직관적인 `[-]` 버튼, 줌 슬라이더 (25% ~ 800%), `[+]` 버튼, 현재 배율 퍼센트 라벨(예: `100%`) 탑재
 * **트랙패드 & 마우스 휠 줌:**
   * 트랙패드 두 손가락 핀치-투-줌(Pinch-to-zoom) 제스처 지원 (마우스 커서 중심 확대/축소 및 슬라이더 실시간 연동)
   * `⌘ + 마우스 휠 스크롤` 줌 지원
@@ -73,14 +73,14 @@ Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역�
 * 마우스로 원하는 위치로 자유롭게 이동하거나 크기를 조절할 수 있습니다.
 * 도화지 바깥을 클릭하거나 `Enter`를 누르면 현재 위치 그대로 메인 캔버스에 영구 병합(Bake)됩니다.
 
-### 7. Windows 11 Paint 원본 SVG 아이콘 및 직관적인 툴바 (선택 도구 눌림 효과)
-* Windows 11 `mspaint.exe` 패키지에서 직접 추출한 원본 SVG 에셋(연필, 브러시, 지우개, 페인트통, 스포이드, 도형 등)이 그대로 탑재되었습니다.
-* **활성 도구 눌림 효과 (Active Pressed State):** 현재 선택된 도구 버튼이 Windows 11 Fluent 스타일의 부드러운 하늘색 틴트 배경과 1.5px 액센트 블루 테두리, 그리고 1px 물리적 깊이감으로 확실하게 '꾹 눌려있는' 시각적 피드백을 제공합니다.
+### 7. 고화질 SVG 벡터 아이콘 및 직관적인 툴바 (선택 도구 눌림 효과)
+* 깔끔하고 직관적인 고품질 SVG 벡터 에셋(연필, 브러시, 지우개, 페인트통, 스포이드, 도형 등)이 탑재되었습니다.
+* **활성 도구 눌림 효과 (Active Pressed State):** 현재 선택된 도구 버튼이 부드러운 하늘색 틴트 배경과 1.5px 액센트 블루 테두리, 그리고 1px 물리적 깊이감으로 확실하게 '꾹 눌려있는' 시각적 피드백을 제공합니다.
 * **스마트 툴바 동기화:** 도구 버튼 클릭 시뿐만 아니라, 스포이드로 색을 추출한 후 연필로 자동 복귀하거나 이미지를 붙여넣어 선택 모드로 진입할 때도 툴바의 눌림 상태가 실시간으로 자동 연동됩니다.
 * **그리기 도구:** 선택 도구(영역 선택), 연필, 브러시, 지우개, 채우기(고속 Flood Fill), 스포이드, 텍스트
 * **도형 도구:** 직선, 직사각형, 둥근 직사각형(네 모서리가 모두 완벽히 둥근 대칭 사각형), 타원 (실시간 프리뷰 지원)
 * **글자(텍스트) 도구:** 또렷하고 올바르게 정방향으로 서 있는 한국어 '가가' 타이포그래피 벡터 아이콘 적용
-* **색상 팔레트:** Color 1(전경색) / Color 2(배경색) 및 윈도우 11 그림판 표준 20색 그리드 + 시스템 컬러 피커 연동
+* **색상 팔레트:** Color 1(전경색) / Color 2(배경색) 및 표준 20색 그리드 + 시스템 컬러 피커 연동
 
 ### 8. 스캔라인 페인트통 & 고해상도 적응형 메모리 보호
 * **초고속 스캔라인 Flood Fill (스마트 페인트통):** 가로 스팬(Span) 단위 스캔 및 1픽셀당 1비트 비트셋 방문 추적을 도입하여, 4K 초고해상도 캔버스에서도 메모리를 1MB 미만으로 극소화하며 프레임 드랍 없이 순식간에 영역을 채웁니다.
@@ -88,7 +88,7 @@ Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역�
 * **자동화 단위 테스트(Unit Tests):** `swift test`를 통한 핵심 캔버스 엔진, 오프셋 방향 리사이징, Undo/Redo 생명주기 및 픽셀 매칭 단위 테스트 100% 무결점 통과.
 
 ### 9. 고화질 macOS 앱 아이콘 (.icns) & `/Applications` 지원
-* 최신 macOS Squircle(둥근 사각형) 규격에 Windows 11 그림판 팔레트와 붓 3D 에셋을 결합한 고화질 Retina `.icns` 탑재 (16x16 ~ 1024x1024 멀티스케일).
+* 최신 macOS Squircle(둥근 사각형) 규격의 고화질 Retina `.icns` 탑재 (16x16 ~ 1024x1024 멀티스케일).
 * `/Applications` 폴더에 설치되어 Spotlight(`⌘Space`) 및 런치패드에서 일반 앱처럼 바로 실행 가능.
 
 ### 10. 단축키 요약
@@ -187,21 +187,18 @@ ditto -c -k --sequesterRsrc --keepParent kMacPaint.app kMacPaint.zip
         │   ├── ToolType.swift       # 페인트 도구 열거형 정의
         │   └── FloodFill.swift      # 픽셀 메모리 포인터 기반 고속 페인트통 알고리즘
         ├── UI/
-        │   ├── ToolbarView.swift    # 윈도우 11 그림판 스타일 상단 리본 메뉴
+        │   ├── ToolbarView.swift    # 상단 도구 리본 메뉴
         │   ├── PaletteView.swift    # Color 1/Color 2 및 20색 컬러 그리드, 상대 휘도 명암 처리
         │   └── StrokeSizePicker.swift # 선 두께 조절 팝업
         └── Resources/
             ├── AppIcon.icns         # 1024x1024 macOS Squircle 전용 앱 아이콘
-            └── Icons/               # Windows 11 그림판 원본 SVG 벡터 아이콘 모음
+            └── Icons/               # 전용 SVG 벡터 아이콘 모음
 ```
 
 ---
 
-## 📄 라이선스 & 상표권 고지 (License & Disclaimer)
+## 📄 라이선스 (License)
 
-- **라이선스**: 본 프로젝트 소스코드는 **MIT License** 하에 배포됩니다.
-- **상표권 고지**:
-  - 'Microsoft Paint', 'Windows', 'Fluent'는 Microsoft Corporation의 등록상표입니다.
-  - 'MacPaint', 'macOS'는 Apple Inc.의 등록상표입니다.
-  - 본 프로젝트는 Microsoft 또는 Apple과 공식적인 제휴나 보증이 없는 독립적인 맥용 유틸리티 오픈소스 프로젝트입니다.
+- 본 프로젝트 소스코드는 **MIT License** 하에 자유롭게 배포 및 사용됩니다.
+
 
