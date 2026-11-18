@@ -194,3 +194,14 @@ ditto -c -k --sequesterRsrc --keepParent kMacPaint.app kMacPaint.zip
             ├── AppIcon.icns         # 1024x1024 macOS Squircle 전용 앱 아이콘
             └── Icons/               # Windows 11 그림판 원본 SVG 벡터 아이콘 모음
 ```
+
+---
+
+## 📄 라이선스 & 상표권 고지 (License & Disclaimer)
+
+- **라이선스**: 본 프로젝트 소스코드는 **MIT License** 하에 배포됩니다.
+- **상표권 고지**:
+  - 'Microsoft Paint', 'Windows', 'Fluent'는 Microsoft Corporation의 등록상표입니다.
+  - 'MacPaint', 'macOS'는 Apple Inc.의 등록상표입니다.
+  - 본 프로젝트는 Microsoft 또는 Apple과 공식적인 제휴나 보증이 없는 독립적인 맥용 유틸리티 오픈소스 프로젝트입니다.
+
