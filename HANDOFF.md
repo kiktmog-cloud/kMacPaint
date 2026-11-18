@@ -3,6 +3,8 @@
 **프로젝트명:** kMacPaint (Windows 11 mspaint REA 기반 macOS 네이티브 재구현)  
 **최종 갱신일자:** 2026-11-18  
 **작업 경로:** `/Users/inkeunkang/Library/CloudStorage/GoogleDrive-gemus.kik@gmail.com/내 드라이브/종합집계_260416/Tools_툴즈_260715/261118_맥_그림판_mspaint`  
+**GitHub 저장소:** [https://github.com/kiktmog-cloud/kMacPaint](https://github.com/kiktmog-cloud/kMacPaint)  
+**GitHub 최신 릴리즈 다운로드:** [https://github.com/kiktmog-cloud/kMacPaint/releases/latest](https://github.com/kiktmog-cloud/kMacPaint/releases/latest)  
 **플랫폼 타겟:** macOS 12.0 (Monterey) 이상 (Apple Silicon M1~M5 및 Intel Universal)  
 **기술 스택:** Swift 5.7+, AppKit, CoreGraphics, Swift Package Manager (SPM)
 
@@ -99,6 +101,12 @@ Windows 11 최신 그림판(`mspaint.exe`)의 동작 방식과 UI/UX를 분석�
 
 ## 4. 변경 이력 (Changelog)
 
+* **2026-11-18 (v2.2):**
+  * GitHub 원격 저장소 연동 및 원클릭 릴리즈 배포 체계 구축:
+    * GitHub CLI (`gh`) 연동을 통해 공개 저장소(`https://github.com/kiktmog-cloud/kMacPaint`) 자동 생성 및 `main` 브랜치 소스 코드 푸시
+    * `.gitignore` 설정으로 빌드 아티팩트 및 로컬 설정 제외하고 깔끔한 오픈소스 구조 확립
+    * GitHub Releases (`v2.1`) 태그 발행 및 3.3MB 유니버설 바이너리 `kMacPaint.zip` 클라우드 CDN 배포 자동 연동
+    * `README.md` 내 GitHub Release 뱃지 및 원클릭 다운로드 바로가기 추가
 * **2026-11-18 (v2.1):**
   * 포니테일(Ponytail) 시니어 개발자 코드 감사 지적 사항 6종 완전 조치:
     1. **텍스트 경계 클램핑 버그 수정:** 캔버스 우측/하단 가장자리 인근에서 인라인 텍스트 커밋 시 500px 하드코딩 대신 에디터 실측 너비 및 잔여 캔버스 폭을 적용하여 글자가 캔버스 밖으로 잘리지 않고 정확한 위치에 병합되도록 수정 (`CanvasView.swift`)
