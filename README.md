@@ -2,6 +2,12 @@
 
 Windows 11 최신 그림판(`mspaint.exe`)의 리소스와 인터랙션을 역공학(REA)하여, **macOS 네이티브(Swift / AppKit / CoreGraphics)** 환경에 100% 동일한 사용감으로 재구현한 맥용 그림판입니다.
 
+[![Release](https://img.shields.io/github/v/release/kiktmog-cloud/kMacPaint?color=0078D4&label=kMacPaint%20Release)](https://github.com/kiktmog-cloud/kMacPaint/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-macOS%2012.0+-lightgrey)](https://github.com/kiktmog-cloud/kMacPaint)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+[📥 **최신 kMacPaint.zip 다운로드 (GitHub Releases)**](https://github.com/kiktmog-cloud/kMacPaint/releases/latest)
+
 ---
 
 ## 🎨 핵심 구현 기능
